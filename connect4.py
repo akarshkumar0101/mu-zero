@@ -30,10 +30,11 @@ def render(state, mode='img'):
         plt.yticks(np.arange(6)+.5)
         plt.grid()
     else:
+        print(f'{state.player} to move')
         for r in range(5, -1, -1):
             print('|',end='')
             for c in range(6):
-                print('X|' if state[r, c]==1 else ('O|' if state[r,c]==-1 else ' |'), end='')
+                print('X|' if state.board[r, c]==1 else ('O|' if state.board[r,c]==-1 else ' |'), end='')
             print()
 
 
